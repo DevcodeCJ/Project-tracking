@@ -1,0 +1,326 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 16px;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   font-family: 'Barlow Condensed', sans-serif; 
+   height: 100vh;
+}
+
+h1 {
+   color: hsl(230, 29%, 20%);
+   font-size: 3rem;
+   padding: 18px 0 25px;
+   text-transform: uppercase;
+}
+
+.desktop-bg {
+   background-color: hsl(207, 33%, 95%);
+   border-bottom-left-radius: 75px;
+   width: 57.5%;
+   height: 50%;
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: 0;
+}
+
+.link {
+   text-decoration: none;
+   text-transform: uppercase;
+   color: hsl(230, 29%, 20%);
+   font-weight: bold;
+   letter-spacing: 1.2px;
+}
+
+.login-link {
+   text-decoration: none;
+   text-transform: uppercase;
+   color: hsl(231, 7%, 65%);
+   font-weight: bold;
+}
+
+.illustration-mobile {
+   display: none;
+   height: 95vw;
+   position: relative;
+   background-image: url('images/illustration-devices.svg');
+   background-repeat: no-repeat;
+   background-position: left top;
+   background-size: 138%;
+}
+
+/***** Navigation *****/
+ 
+nav { 
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   padding: 50px 7%;
+}
+
+.logo {
+   cursor: pointer;
+}
+
+#close {
+   display: none;
+   cursor: pointer;
+   transition: display 0.4s;
+}
+
+#hamburger {
+   display: none;
+   cursor: pointer;
+   transition: display 0.4s;
+}
+
+.nav-links {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 40%;
+}
+
+.nav-links .dot {
+   background-color: hsl(236, 19%, 82%);
+   width: 0.5rem;
+   height: 0.5rem;
+   border-radius: 10px;
+   margin-top: 3px;
+}
+
+.nav-links .link:hover {
+   text-decoration: underline;
+}
+
+.nav-mobile {
+   background-color: hsl(0, 0%, 100%);
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   position: absolute;
+   top: 132px;
+   left: 7%;
+   padding: 15px 25px 20px;
+   width: 86%;
+   text-align: center;
+   box-shadow: 0 5px 20px -5px hsl(231, 7%, 65%);
+   z-index: 1;
+   -webkit-transition: display 0.4s;
+   transition: display 0.4s;
+}
+
+.nav-mobile .link {
+   display: block;
+   padding: 10px 0;
+   width: 100%;
+}
+
+.nav-mobile .link:hover {
+   color: hsl(231, 7%, 65%);
+}
+
+.nav-mobile .login-link {
+   border-top: 2px solid hsl(200, 24%, 93%);
+   margin-top: 15px;
+   padding: 20px 0 0;
+}
+
+.nav-mobile .login-link:hover {
+   color: hsl(230, 29%, 20%);
+}
+
+/***** Introduction *****/
+ 
+main { 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 0 0 7%;
+   position: relative;
+   margin-top: -80px;
+}
+
+.dashboard {
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+   width: 250px;
+}
+
+.dashboard span {
+   background-color: hsl(230, 29%, 20%);
+   border-radius: 12px;
+   color: hsl(0, 0%, 100%);
+   font-weight: bold;
+   padding: 2px 10px;
+   text-transform: uppercase;
+}
+
+.dashboard p, .demo p {
+   color: hsl(231, 7%, 65%);
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+}
+
+.intro p {
+   color: hsl(231, 7%, 65%);
+   font-family: Barlow, sans-serif;
+   line-height: 1.5;
+   width: 250px;
+}
+
+.demo {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-top: 80px;
+   width: 390px;
+}
+
+.demo-btn {
+   background-color: hsl(0, 100%, 65%);
+   border-radius: 7.5px;
+   color: hsl(0, 0%, 100%);
+   font-weight: bold;
+   letter-spacing: 1.5px;
+   padding: 15px 30px;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+
+.demo-btn:hover {
+   background-color: hsl(0, 100%, 80%);
+}
+
+.illustration {
+   height: 464px;
+   overflow: hidden;
+   width: 695px;
+}
+
+/***** Footer *****/
+ 
+.attribution { 
+    font-weight: 100;
+    font-size: 13px; 
+    text-align: center; 
+    color: hsl(217, 19%, 35%);
+    opacity: 75%;
+    margin-bottom: 5px;
+ }
+     
+.attribution a:link, .attribution a:visited { 
+ 
+    font-weight: 400;
+    color: hsl(217, 19%, 35%);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+
+   body {
+      height: 100%;
+   }
+
+   h1 {
+      width: 95%;
+      font-size: 2.5rem;
+   }
+
+   #hamburger {
+      display: block;
+   }
+
+   .dashboard {
+      width: 85%;
+      justify-content: left;
+   }
+
+   .dashboard p {
+      letter-spacing: 3.5px;
+      margin-left: 20px;
+   }
+
+   .demo {
+      width: 90%;
+      padding: 40px 0;
+      justify-content: left;
+   }
+
+   .demo-btn {
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      padding: 12px 20px;
+      border-radius: 5px;
+      margin-right: 5%;
+   }
+
+   .demo p {
+      font-size: 0.8rem;
+   }
+
+   .desktop-bg {
+      width: 50%;
+      height: 455px;
+      border-bottom-left-radius: 75px;
+   }
+   
+   .illustration-mobile {
+      display: block;
+   }
+
+   .illustration {
+      display: none;
+   }
+
+   .intro p {
+      font-size: 1.1rem;
+      width: 85%;
+   }
+
+   main { 
+      margin-top: 0;
+   }
+
+   .nav-links {
+      display: none;
+   }
+
+ }
+
+ @media screen and (max-width: 1440px) {
+
+   h1 {
+      max-width: 400px;
+   }
+
+ }
+
+ @media screen and (min-width: 1440px) {
+
+   nav { 
+      padding: 50px 12%;
+   }
+
+   main { 
+      padding: 0 0 0 12%;
+   }
+
+   h1 {
+      min-width: 50%;
+   }
+
+ }
